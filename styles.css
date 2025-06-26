@@ -242,12 +242,14 @@ main {
 .victory-message {
     display: none;
     position: fixed;
-    top: 50vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
-    background: linear-gradient(135deg, 
-        rgba(29, 78, 216, 0.95) 0%, 
-        rgba(67, 56, 202, 0.95) 50%, 
+    inset: 0; 
+    margin: auto; 
+    width: 90vw;
+    max-width: 500px;
+    height: fit-content;
+    background: linear-gradient(135deg,
+        rgba(29, 78, 216, 0.95) 0%,
+        rgba(67, 56, 202, 0.95) 50%,
         rgba(147, 51, 234, 0.95) 100%);
     padding: 40px;
     border-radius: 20px;
@@ -256,18 +258,19 @@ main {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
     z-index: 1000;
     animation: victoryAppear 0.8s ease-out;
+    box-sizing: border-box;
 }
 
 @keyframes victoryAppear {
-    0% { 
-        opacity: 0; 
-        transform: translate(-50%, -50%) scale(0.5); 
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
     }
-    100% { 
-        opacity: 1; 
-        transform: translate(-50%, -50%) scale(1); 
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
-}
+}    
 
 .victory-content h2 {
     font-family: 'Orbitron', monospace;
@@ -436,7 +439,7 @@ footer a:hover {
     }
     
     .victory-message {
-        padding: 20px;
+        padding: 25px;
     }
 
     .subtitle {
@@ -477,19 +480,8 @@ footer a:hover {
         font-size: 1rem;
         touch-action: manipulation;
     }
-}
 
-@media (max-width: 768px) {
-    .victory-message {
-        top: 50vh;
-        left: 50vw;
-        transform: translate(-50%, -50%);
-        width: 90vw;
-        max-width: 95%;
-        box-sizing: border-box;
-    }
-
-    .victory-content {
-        text-align: center;
+    .victory-content h2 {
+        font-size: 1.4rem;
     }
 }
