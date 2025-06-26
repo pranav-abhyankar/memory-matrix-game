@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Matrix:Test your Memory</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars-bg"></div>
+    <div class="gradient-overlay"></div>
+    <div id="confetti-container"></div>
+    
+    <header>
+        <div class="header-content">
+            <h1 class="neon-text">Memory Matrix</h1>
+            <h2 class="subtitle">Test your Memory</h2>
+            <div class="game-stats">
+                <div id="timer" class="stat-item">
+                    <span class="stat-label">Time</span>
+                    <span class="stat-value">00:00</span>
+                </div>
+                <div id="match-info" class="stat-item">
+                    <span class="stat-label">Matches</span>
+                    <span class="stat-value">0/8</span>
+                </div>
+                <div id="moves-counter" class="stat-item">
+                    <span class="stat-label">Moves</span>
+                    <span class="stat-value">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="game-container">
+            <p class="game-instructions">
+                Click on two cards to find matching symbols.<br>
+                Find all matching pairs to win the game!
+            </p>
+            
+            <div id="game-board" class="game-board">
+                <div class="card" data-image="img1">
+                    <div class="card-inner">
+                        <div class="card-front"></div>
+                        <div class="card-back">
+                            <img src="/telescope.png" alt="Cap">
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-image="img1">
+                    <div class="card-inner">
+                        <div class="card-front"></div>
+                        <div class="card-back">
+                            <img src="/telescope.png" alt="Cap">
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-image="img2">
+                    <div class="card-inner">
+                        <div class="card-front"></div>
+                        <div class="card-back">
+                            <img src="/burger.png" alt="Chip">
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-image="img2">
+                    <div class="card-inner">
+                        <div class="card-front"></div>
+                        <div class="card-back">
+                            <img src="/burger.png" alt="Chip">
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-image="img3">
+                    <div class="card-inner">
+                        <div class="card-front"></div>
+                        <div class="card-back">
+                            <img src="/plant.png" alt="Gears">
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-image="img3">
+                    <div class="card-inner">
+                        <div class="card-front"></div>
+                        <div class="card-back">
+                            <img src="/plant.png" alt="Gears">
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-image="img4">
+                    <div class="card-inner">
+                        <div class="card-front"></div>
+                        <div class="card-back">
+                            <img src="/rocket.png" alt="Keyboard">
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-image="img4">
+                    <div class="card-inner">
+                        <div class="card-front"></div>
+                        <div class="card-back">
+                            <img src="/rocket.png" alt="Keyboard">
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-image="img5">
+                    <div class="card-inner">
+                        <div class="card-front"></div>
+                        <div class="card-back">
+                            <img src="/clown.png" alt="Rocket">
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-image="img5">
+                    <div class="card-inner">
+                        <div class="card-front"></div>
+                        <div class="card-back">
+                            <img src="/clown.png" alt="Rocket">
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-image="img6">
+                    <div class="card-inner">
+                        <div class="card-front"></div>
+                        <div class="card-back">
+                            <img src="/book.png" alt="Satellite">
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-image="img6">
+                    <div class="card-inner">
+                        <div class="card-front"></div>
+                        <div class="card-back">
+                            <img src="/book.png" alt="Satellite">
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-image="img7">
+                    <div class="card-inner">
+                        <div class="card-front"></div>
+                        <div class="card-back">
+                            <img src="/electric-guitar.png" alt="Bug">
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-image="img7">
+                    <div class="card-inner">
+                        <div class="card-front"></div>
+                        <div class="card-back">
+                            <img src="/electric-guitar.png" alt="Bug">
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-image="img8">
+                    <div class="card-inner">
+                        <div class="card-front"></div>
+                        <div class="card-back">
+                            <img src="/clock.png" alt="Logic">
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-image="img8">
+                    <div class="card-inner">
+                        <div class="card-front"></div>
+                        <div class="card-back">
+                            <img src="/clock.png" alt="Logic">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="congratulations" class="victory-message">
+                <div class="victory-content">
+                    <h2>🎉 Congratulations! 🎉</h2>
+                    <p>You found all the pairs!</p>
+                    <div class="victory-stats">
+                        <span id="final-time">Time: 00:00</span>
+                        <span id="final-moves">Moves: 0</span>
+                    </div>
+                    <br>
+                    <button id="play-again" class="play-again-btn">
+                        <span>Play Again</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Made with ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
