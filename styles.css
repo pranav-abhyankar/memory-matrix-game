@@ -477,5 +477,19 @@ footer a:hover {
         font-size: 1rem;
         touch-action: manipulation;
     }
+}
 
+@media (max-width: 768px) {
+    .victory-message {
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
+        width: 90vw;
+        max-width: 95%;
+        box-sizing: border-box;
+    }
+
+    .victory-content {
+        text-align: center;
+    }
 }
