@@ -1,6 +1,6 @@
 # 🔮 Memory Matrix
 
-A futuristic, visually stunning **Memory Match Game** built with HTML, CSS, and JavaScript — featuring animated cards, neon glow effects, a celebration system, and real-time stats. Designed with a sci-fi aesthetic to deliver an immersive browser gaming experience.
+A futuristic, visually stunning **Card matching game based on your memory** built with HTML, CSS, and JavaScript — featuring animated cards, neon glow effects, a celebration system, and real-time stats. Designed with a sci-fi aesthetic to deliver an immersive browser gaming experience.
 
 ---
 
